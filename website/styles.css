@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0; /* Resetting default margin */
+    background-image: url('bkg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .row {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal arrangement */
+    gap: 20px;
+}
+
+.glass-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s, font-size .3s;
+    text-decoration: none;
+    color: black;
+}
+
+.glass-btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+    font-size: 20px;
+}
+
+/* Wide Screen Monitor */
+@media (min-width: 1800px) {
+    .glass-btn {
+        font-size: 22px;
+    }
+    .glass-btn:hover {
+        font-size: 25px;
+    }
+}
+
+/* Regular Monitor */
+@media (min-width: 1024px) and (max-width: 1799px) {
+    .glass-btn {
+        font-size: 18px;
+    }
+    .glass-btn:hover {
+        font-size: 22px;
+    }
+}
+
+/* Cell Phone */
+@media (max-width: 767px) {
+    .container .row {
+        flex-direction: column; /* Vertical arrangement for mobile */
+    }
+    .glass-btn {
+        font-size: 16px;
+        width: 100%; /* Full width buttons on mobile for better touch targets */
+        text-align: center;
+    }
+    .glass-btn:hover {
+        font-size: 18px;
+    }
+}
