@@ -1,3 +1,18 @@
+    body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 iframe {
     background: rgba(255, 255, 255, 0.5);  /* Semi-transparent white */
@@ -10,13 +25,6 @@ iframe {
 }
 iframe:hover {
     transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
-}
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-
 }
 
 a {
